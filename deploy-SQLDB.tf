@@ -7,7 +7,7 @@ resource "azurerm_sql_server" "sqlbox" {
   administrator_login_password = "${var.sqladminpassword}"
 }
 
-resource "azurerm_sql_database" "fxrates" {
+resource "azurerm_sql_database" "db" {
   name                = "${var.database_name}"
   resource_group_name = "${azurerm_resource_group.rg.name}"
   location            = "${var.location}"

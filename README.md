@@ -24,6 +24,7 @@ sqladminuser = username of sql admin
 
 * Make sure you have [terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) installed and added to path.
 * Make sure you have [az cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest) installed.
+* Should you have more than one subscription, specify it ```az account set --subscription="SUBSCRIPTION_ID"```
 * Open shell at root of directory (ie PowerShell)
 * Login using az commands
 * Run ```terraform init```

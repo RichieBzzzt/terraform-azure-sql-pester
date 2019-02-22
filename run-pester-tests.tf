@@ -3,7 +3,7 @@ resource "null_resource" "run-pestertest" {
     command = ".\\scripts\\runTests.ps1 -resourceGroupname ${azurerm_resource_group.rg.name} -databaseName ${var.database_name} -serverName ${var.environment_prefix}${var.application}sql${var.location}${var.environment_suffix} -sqlAdministratorLogin ${var.sqladminuser} -sqlAdministratorLoginPassword ${var.sqladminpassword}",
     interpreter = ["PowerShell"]
   }
-  depends_on = ["azurerm_sql_database.fxrates", "null_resource.run-installtools"]
+  depends_on = ["azurerm_sql_database.db", "null_resource.run-installtools"]
   triggers = {
     always_run = "${timestamp()}"
   }
