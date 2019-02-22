@@ -1,0 +1,11 @@
+terraform.tfstate
+terraform.tfstate.backup
+secrets.auto.tfvars
+params.tfvars
+terraform.tfplan
+/backend.tf
+.terraform
+.idea
+.terraform.tfstate.lock.info
+/output/*.xml
+.TestRun.xml

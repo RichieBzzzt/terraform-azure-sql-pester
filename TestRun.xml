@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2019-02-22" time="15:08:36">
+  <environment user="RichardLee" machine-name="DESKTOP-EVLFIM4" cwd="C:\Users\RichardLee\source\repos\terraform-azure-sql-pester" user-domain="AzureAD" platform="Microsoft Windows 10 Pro|C:\WINDOWS|\Device\Harddisk0\Partition3" nunit-version="2.5.8.0" os-version="10.0.18323" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="1.1982" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name=".\tests\testSql.ps1" executed="True" result="Failure" success="False" time="1.1982" asserts="0" description=".\tests\testSql.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Check Database Exists" executed="True" result="Failure" success="False" time="1.0424" asserts="0" description="Check Database Exists">
+            <results>
+              <test-case description="Test Database Exists" name="Check Database Exists.Test Database Exists" time="0.5354" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Expected strings to be the same, but they were different.
+Expected length: 7
+Actual length:   5
+Strings differ at index 0.
+Expected: 'fxrates'
+But was:  'bzzzt'
+-----------^</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\Users\RichardLee\source\repos\terraform-azure-sql-pester\tests\testSql.ps1: line 18
+18:         $dbname | Should Be "fxrates"</stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
